@@ -57,6 +57,7 @@ class MyCartViewBody extends StatelessWidget {
               bottom: 12.0,
             ),
             child: CustomButton(
+              text: 'Complete Payment',
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
