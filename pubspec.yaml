@@ -38,6 +38,8 @@ dependencies:
   flutter_svg:
   flutter_credit_card: ^4.0.1
   font_awesome_flutter:
+  flutter_stripe: ^10.1.1
+  dio:
 
 dev_dependencies:
   flutter_test:
