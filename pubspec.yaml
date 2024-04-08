@@ -40,6 +40,8 @@ dependencies:
   font_awesome_flutter:
   flutter_stripe: ^10.1.1
   dio:
+  dartz:
+  flutter_bloc:
 
 dev_dependencies:
   flutter_test:
