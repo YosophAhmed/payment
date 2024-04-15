@@ -34,6 +34,7 @@ class PaymentMethodsBottomSheet extends StatelessWidget {
                 );
               }
               if (state is FailurePaymentState) {
+                Navigator.pop(context);
                 SnackBar snackBar = SnackBar(
                   content: Text(
                     state.errorMessage,
@@ -51,6 +52,7 @@ class PaymentMethodsBottomSheet extends StatelessWidget {
                       PaymentIntentInputModel(
                     amount: '100',
                     currency: 'USD',
+                    customerId: 'cus_PvBVwo5vOSQFo7',
                   );
                   BlocProvider.of<PaymentCubit>(context).makePayment(
                     paymentIntentInputModel: paymentIntentInputModel,

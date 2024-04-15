@@ -46,15 +46,9 @@ class PaymentIntentModel {
     object = json['object'];
     amount = json['amount'];
     amountCapturable = json['amount_capturable'];
-    amountDetails = json['amount_details'] != null
-        ? AmountDetails.fromJson(json['amount_details'])
-        : null;
     amountReceived = json['amount_received'];
     application = json['application'];
     applicationFeeAmount = json['application_fee_amount'];
-    automaticPaymentMethods = json['automatic_payment_methods'] != null
-        ? AutomaticPaymentMethods.fromJson(json['automatic_payment_methods'])
-        : null;
     canceledAt = json['canceled_at'];
     cancellationReason = json['cancellation_reason'];
     captureMethod = json['capture_method'];
@@ -72,11 +66,8 @@ class PaymentIntentModel {
     nextAction = json['next_action'];
     onBehalfOf = json['on_behalf_of'];
     paymentMethod = json['payment_method'];
-    paymentMethodOptions = json['payment_method_options'] != null
-        ? PaymentMethodOptions.fromJson(json['payment_method_options'])
-        : null;
     paymentMethodTypes = json['payment_method_types'] != null
-        ? json['payment_method_types'].cast<String>()
+        ? json['payment_method_types'].cast<dynamic>()
         : [];
     processing = json['processing'];
     receiptEmail = json['receipt_email'];
@@ -117,7 +108,7 @@ class PaymentIntentModel {
   dynamic onBehalfOf;
   dynamic paymentMethod;
   PaymentMethodOptions? paymentMethodOptions;
-  List<String>? paymentMethodTypes;
+  List<dynamic>? paymentMethodTypes;
   dynamic processing;
   dynamic receiptEmail;
   dynamic review;
